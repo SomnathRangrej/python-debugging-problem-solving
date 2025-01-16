@@ -8,4 +8,6 @@ df = pd.read_csv(csv_directory_path + '/googleplaystore.csv')
 print(df.info())
 # perform data type conversion on 'Rating' and 'Reviews' column
 df['Reviews'].astype('float')
-print(df.info())
+average_of_reviews = df['Reviews'].mean()
+print(f"The average number of reviews is: {average_of_reviews}")
+

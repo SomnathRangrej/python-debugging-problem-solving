@@ -21,4 +21,6 @@ print(df.info())
 df['Reviews'] = df['Reviews'].apply(handleIncorrecRecord)
 # perform data type conversion on 'Rating' and 'Reviews' column
 df['Reviews'].astype('float')
-print(df.info())
+average_of_reviews = df['Reviews'].mean()
+print(f"The average number of reviews is: {average_of_reviews}")
+

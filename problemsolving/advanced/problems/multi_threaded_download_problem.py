@@ -1,7 +1,7 @@
 """
 This is a simple script that sends a get request to a url (there are four in total here),
 and each request is sent in its own thread. This simple script will demonstrate
-PyCharm's ability to debug threads.
+IDE's ability to debug threads.
 """
 from threading import Thread
 import requests

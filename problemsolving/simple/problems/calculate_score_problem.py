@@ -1,5 +1,5 @@
 '''
-Consider that vowels in the alphabet are a, e, i, o, u and y.
+Consider that vowels in the alphabet are a, e, i, o, u
 Function score_words takes a list of lowercase words as an argument and returns a score as follows:
 The score of a single word is 2 if the word contains an even number of vowels.
 Otherwise, the score of this word is 1.
@@ -18,10 +18,12 @@ def score_words(words):
         for letter in word:
             if is_vowel(letter):
                 num_vowels += 1
-        if num_vowels % 2 == 0:
+        if (num_vowels % 2 == 0 and num_vowels != 0):
             score += 2
+        elif (num_vowels % 2 != 0 and num_vowels >= 1):
+            score += 1
     return score
 
-input = ['programming','is','awesome']
+input = ['programming','is','awesome', 'aeio', 'xyz', 'aaaaa...','a.e.i.o.u','', 'áéíóú']
 score = score_words(input)
 print("score is for '",input,"' is :",score)
